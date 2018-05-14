@@ -58,11 +58,16 @@
 </a>
 <!--Top Arrow end-->
 
+<!--todo: всплывашка при клике на "Заказать звонок"-->
+<!--todo: всплывашка при клике на бургер у каталога-->
+<!--todo: Версия шапки для ноутбуков-->
+
+
 <div id="my-header">
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="menu-m-b hidden-lg-only">
+		<div class="row header-r">
+			<div class="col mobmenu-c">
+				<div class="menu-m-b">
 					<a href="#my-menu" class="hamburger hamburger--squeeze js-hamburger" type="button" id="menu-btn">
 		          <span class="hamburger-box">
 		              <span class="hamburger-inner"></span>
@@ -72,66 +77,119 @@
 					</nav>
 				</div>
 			</div>
-			<div class="col hidden-md-down">
-				<div class="main-menu">
-					<ul>
-						<li data-trigger="#vaka" ><a href="javascript:void(0)">
-							Вакансии
-						</a></li>
-						<li data-trigger="#slider-object"><a href="javascript:void(0)">
-							Объекты строительства
-						</a></li>
-						<li data-trigger="#about-company"><a href="javascript:void(0)">
-							О компании
-						</a>
-						</li>
-						<li data-trigger="#employer"><a href="javascript:void(0)">
-							Гарантии
-						</a></li>
-						<li data-trigger="#feedback"><a href="javascript:void(0)">
-							Отзывы
-						</a>
-						</li>
-					</ul>
+
+			<div class="col-12 col-lg-3 col-xxl-3">
+				<div class="logo-c">
+					<a href="">
+						<img src="img/logo.png" alt="Профиль">
+					</a>
 				</div>
 			</div>
+			<div class="col-12 col-lg-6 col-xxl-8">
+				<div class="main-menu-c">
+					<div class="main-menu">
+						<ul>
+							<li class="catalog">
+								<div class="catalog-menu-btn">
+									<svg
+											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink"
+											width="13px" height="11px">
+										<path fill-rule="evenodd"  fill="rgb(65, 39, 34)"
+											  d="M12.350,9.777 L0.650,9.777 C0.291,9.777 -0.000,10.051 -0.000,10.389 C-0.000,10.726 0.291,11.000 0.650,11.000 L12.350,11.000 C12.709,11.000 13.000,10.726 13.000,10.389 C13.000,10.051 12.709,9.777 12.350,9.777 ZM0.650,1.222 L12.350,1.222 C12.709,1.222 13.000,0.948 13.000,0.611 C13.000,0.274 12.709,-0.000 12.350,-0.000 L0.650,-0.000 C0.291,-0.000 -0.000,0.274 -0.000,0.611 C-0.000,0.948 0.291,1.222 0.650,1.222 ZM12.350,4.889 L0.650,4.889 C0.291,4.889 -0.000,5.162 -0.000,5.500 C-0.000,5.837 0.291,6.111 0.650,6.111 L12.350,6.111 C12.709,6.111 13.000,5.837 13.000,5.500 C13.000,5.162 12.709,4.889 12.350,4.889 Z"/>
+									</svg>
+								</div>
+								<a href="">
+									Каталог
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									Услуги
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									О компании
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									Статьи
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									Контакты
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+									Скидки
+								</a>
+							</li>
+						</ul>
+					</div>
+					<button class="btn-find">
+						<svg
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								width="12px" height="12px">
+							<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+								  d="M11.661,10.067 L9.674,8.081 C10.197,7.263 10.510,6.297 10.510,5.254 C10.510,2.352 8.157,-0.000 5.255,-0.000 C2.353,-0.000 -0.000,2.352 -0.000,5.254 C-0.000,8.156 2.353,10.509 5.255,10.509 C6.298,10.509 7.264,10.196 8.081,9.673 L10.068,11.660 C10.508,12.100 11.221,12.100 11.660,11.660 C12.101,11.220 12.101,10.507 11.661,10.067 ZM5.255,9.007 C3.182,9.007 1.501,7.327 1.501,5.254 C1.501,3.182 3.182,1.501 5.255,1.501 C7.328,1.501 9.009,3.182 9.009,5.254 C9.009,7.327 7.328,9.007 5.255,9.007 Z"/>
+						</svg>
+					</button>
+
+					<div class="find-form">
+						<form action="">
+							<input type="text" placeholder="Поиск">
+							<button class="close-find" type="button">
+								<svg
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										width="15px" height="15px">
+									<path fill-rule="evenodd"  fill="rgb(68, 45, 37)"
+										  d="M1.053,0.001 L-0.002,1.056 L6.442,7.500 L-0.002,13.944 L1.053,14.999 L7.497,8.555 L13.941,14.999 L14.996,13.944 L8.552,7.500 L14.996,1.056 L13.941,0.001 L7.497,6.445 L1.053,0.001 Z"/>
+								</svg>
+							</button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-12 col-lg-3 col-xxl-5">
+				<div class="group-b">
+					<a href="" class="basket-c" cont="0">
+						<svg
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								width="24px" height="24px">
+							<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+								  d="M3.000,24.000 L21.000,24.000 L23.334,13.500 L0.667,13.500 L3.000,24.000 ZM18.000,17.250 C18.000,16.836 18.335,16.500 18.750,16.500 C19.165,16.500 19.500,16.836 19.500,17.250 L19.500,21.750 C19.500,22.165 19.165,22.500 18.750,22.500 C18.335,22.500 18.000,22.165 18.000,21.750 L18.000,17.250 ZM13.500,17.250 C13.500,16.836 13.836,16.500 14.250,16.500 C14.665,16.500 15.000,16.836 15.000,17.250 L15.000,21.750 C15.000,22.165 14.665,22.500 14.250,22.500 C13.836,22.500 13.500,22.165 13.500,21.750 L13.500,17.250 ZM9.000,17.250 C9.000,16.836 9.335,16.500 9.750,16.500 C10.164,16.500 10.500,16.836 10.500,17.250 L10.500,21.750 C10.500,22.165 10.164,22.500 9.750,22.500 C9.335,22.500 9.000,22.165 9.000,21.750 L9.000,17.250 ZM4.500,17.250 C4.500,16.836 4.835,16.500 5.250,16.500 C5.665,16.500 6.000,16.836 6.000,17.250 L6.000,21.750 C6.000,22.165 5.665,22.500 5.250,22.500 C4.835,22.500 4.500,22.165 4.500,21.750 L4.500,17.250 ZM22.017,10.500 L22.059,10.453 L14.071,3.131 C14.186,2.859 14.250,2.563 14.250,2.250 C14.250,1.008 13.242,-0.000 12.000,-0.000 C10.757,-0.000 9.750,1.008 9.750,2.250 C9.750,2.563 9.815,2.859 9.930,3.131 L1.940,10.453 L1.983,10.500 L-0.000,10.500 L0.333,12.000 L23.666,12.000 L24.000,10.500 L22.017,10.500 ZM4.110,10.500 L10.951,4.229 C11.265,4.398 11.619,4.500 12.000,4.500 C12.381,4.500 12.734,4.396 13.049,4.229 L19.890,10.500 L4.110,10.500 L4.110,10.500 Z"/>
+						</svg>
+					</a>
+
+					<div class="phone-c">
+						<a href="tel:+73422963147">
+							+7 (342) 296-31-47
+						</a>
+					</div>
+
+					<button class="btn-transparent">
+						Заказать замер
+					</button>
+				</div>
+			</div>
+
 		</div>
 	</div>
-
 </div>
+
+
+
 <div id="my-content" class="main-page">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 ">
-				<div class="h1">
-					BootstrapV4
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">col1</div>
-			<div class="col">col1</div>
-			<div class="col">col1</div>
-			<div class="col">col1</div>
-			<div class="col">col1</div>
-		</div>
-		<div class="row">
-			<div class="col content">
-				<div class="h1">
-					AIR DATEPICKER
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<input type='text' data-timepicker="true" class="datepicker-here" data-position="right top" />
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-12">
-				<div class="h1">Slick Slider</div>
-			</div>
 			<div class="col-12">
 				<div class="main-slider">
 					<div class="item">
@@ -161,12 +219,7 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
-
-
-
-
 </div>
 
 <div id="my-footer">

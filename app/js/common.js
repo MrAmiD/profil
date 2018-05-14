@@ -36,7 +36,6 @@ function MainSliderInit(){//слайдер на главной странице
     $(document).on('click', '.slider-trigers .item-t', function () {
         var slideIndex = $(this).index();
         console.log('slideIndex = ', slideIndex);
-        // $( '.main-slider' ).slickGoTo( parseInt(slideIndex) );
 
         var slider = $('.main-slider');
         slider[0].slick.slickGoTo(parseInt(slideIndex));
@@ -89,6 +88,17 @@ function feedbackSliderSliderInit(){//слайдер на главной стр�
         '</button>'
     });
 }
+
+$(document).on('click', '#my-header .btn-find', function () {
+
+    $('.find-form').fadeIn();
+
+});
+$(document).on('click', '#my-header .close-find', function () {
+
+    $('.find-form').fadeOut();
+
+});
 
 $(function() {
     /*datepicker start*/

@@ -1,7 +1,7 @@
 @import "fonts"
 @import "libs"
 @import "vars"
-
+@import "_mixins/mixins"
 *
 	outline: none!important
 
@@ -89,8 +89,7 @@ a
 	&:hover, &:focus
 		text-decoration: none
 		color: $accent
-button:not(.btn-flat)
-	-webkit-appearance: button-bevel
+
 
 input
 	font-family: $default-font
@@ -821,11 +820,15 @@ html.mm-opening .mm-menu~.mm-slideout
 		font-weight: 500
 
 
-.btn-transparent
-	border: solid 1px $accent
-	border-radius: 5px
+.btn-transparent 
+	border: solid 1px #FFFFFF
+	background: transparent
+	border-radius: 105px
 	padding: 10px 50px
-	font-size: 23px
+	font-size: 18px
+	color: #FFFFFF
+	font-weight: 300
+	transition: background .3s ease
 	svg
 		position: relative
 		top: 7px
@@ -833,6 +836,11 @@ html.mm-opening .mm-menu~.mm-slideout
 	&:after
 		content: ''
 		width: 100%
+	&:hover, &:focus
+		background: $accent2
+		color: $dark
+		border-color: $accent
+
 /*buttons end*/
 
 /*my custom select start*/
@@ -904,16 +912,20 @@ html.mm-opening .mm-menu~.mm-slideout
 	background-image: none
 	background: none
 
+.header-r
+	align-items: center
+
+button
+	border: none
+
 .main-menu
 	ul
 		list-style: none
 		margin: 0
-		margin-top: 6px
 		padding: 0px
-		text-align: right
 		display: flex
 		align-items: center
-		justify-content: flex-end
+		justify-content: flex-start
 		margin-right: -12px
 		li
 			display: inline-block
@@ -921,19 +933,43 @@ html.mm-opening .mm-menu~.mm-slideout
 			position: relative
 			z-index: 2
 			//padding: 31px 0
+			&:hover
+				a
+					color: $dark
+					background: #FFFFFF
+			&.catalog
+				background: #FFFFFF
+				display: flex
+				align-items: center
+				border-radius: 50px
+				padding-right: 10px
+				&:hover
+					background: $accent2
+					.catalog-menu-btn
+						background: $accent2
+					a
+						background: $accent2
+				.catalog-menu-btn
+					position: relative
+					background: #FFFFFF
+					width: 35px
+					height: 35px
+					display: flex
+					align-items: center
+					justify-content: center
+					border-radius: 100px
+					border: solid 1px $accent
+					cursor: pointer
+				a
+					color: $dark
 			&:first-child
 				margin-left: 0px
 			a
 				font-size: 16px
 				font-weight: 500
-				color: $dark
 				padding: 8px 12px
 				border-radius: 50px
-				&:hover
-					background-image: -moz-linear-gradient( -16deg, rgb(255,255,255) 0%, rgb(18,16,11) 100%)
-					background-image: -webkit-linear-gradient( -16deg, rgb(255,255,255) 0%, rgb(18,16,11) 100%)
-					background-image: -ms-linear-gradient( -16deg, rgb(255,255,255) 0%, rgb(18,16,11) 100%)
-					background: $accent
+				color: #FFFFFF 
 			ul
 				padding: 0px
 			&:hover>.subm
@@ -1008,6 +1044,80 @@ html.mm-opening .mm-menu~.mm-slideout
 		display: none
 #my-footer
 	min-height: 400px
+
+.mobmenu-c
+	display: none
+
+button
+	cursor: pointer
+
+#my-header
+	background: $accent
+	margin-top: 60px
+	.find-form
+		position: absolute
+		display: none
+		width: 100%
+		left: 0px
+		top: 0px
+		z-index: 2
+		input
+			width: 100%
+			border-radius: 100px
+			padding-right: 45px
+	.btn-find
+		background: transparent
+		margin-left: 45px
+		cursor: pointer
+	.close-find
+		background: transparent
+		position: absolute
+		right: 15px
+		top: 50%
+		transform: translate(0, -50%)
+		display: flex
+		align-items: center
+	.main-menu-c
+		display: flex
+		align-items: center
+		position: relative
+	.logo-c
+		max-width: 100%
+		position: relative
+		height: 60px
+		img
+			position: absolute
+			left: 0px
+			bottom: 4px
+	.group-b
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.basket-c
+			display: flex
+			align-items: center
+			position: relative
+			&:after
+				content: attr(cont)
+				position: absolute
+				font-size: 14px
+				background: $accent2
+				left: -10px
+				top: -5px
+				width: 20px
+				height: 20px
+				border-radius: 100px
+				display: flex
+				align-items: center
+				justify-content: center
+		.phone-c
+			a
+				color: #FFFFFF
+				font-size: 18px
+				line-height: 1
+		.btn-transparent
+			padding: 5px 20px
+
 /*Project end*/
 
 

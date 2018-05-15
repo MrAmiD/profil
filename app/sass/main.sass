@@ -244,7 +244,7 @@ input
 	padding-top: 3px
 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
 	height: 2px
-	background: $dark
+	background: #FFFFFF
 	width: 24px
 .hamburger--emphatic .hamburger-inner:after
 	top: 7px
@@ -1051,9 +1051,30 @@ button
 button
 	cursor: pointer
 
+.menu-m-b-c
+	display: none
+	.some-items
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		.item-s
+			&:not(:first-child)
+				margin-left: 15px
+	.btn-find
+		margin-left: 0px!important
+	.phone-btn
+		a
+			display: block
+			svg
+				transform: scale(0.64)
 #my-header
-	background: $accent
-	margin-top: 60px
+	background: #e7e5df
+	.lvl2-c
+		width: 100%
+		background: $accent
+		margin-top: 60px
+	.container
+		position: relative
 	.find-form
 		position: absolute
 		display: none
@@ -1093,23 +1114,6 @@ button
 		display: flex
 		align-items: center
 		justify-content: space-between
-		.basket-c
-			display: flex
-			align-items: center
-			position: relative
-			&:after
-				content: attr(cont)
-				position: absolute
-				font-size: 14px
-				background: $accent2
-				left: -10px
-				top: -5px
-				width: 20px
-				height: 20px
-				border-radius: 100px
-				display: flex
-				align-items: center
-				justify-content: center
 		.phone-c
 			a
 				color: #FFFFFF
@@ -1117,6 +1121,35 @@ button
 				line-height: 1
 		.btn-transparent
 			padding: 5px 20px
+	.header-r
+		&.lvl1-h
+			.group-b
+				justify-content: flex-end
+				padding: 14px 0px
+				.phone-c
+					a
+						color: $dark
+				.btn-transparent
+					color: $dark
+					border-color: $dark
+					margin-left: 20px
+.basket-c
+	display: flex
+	align-items: center
+	position: relative
+	&:after
+		content: attr(cont)
+		position: absolute
+		font-size: 14px
+		background: $accent2
+		left: -10px
+		top: -5px
+		width: 20px
+		height: 20px
+		border-radius: 100px
+		display: flex
+		align-items: center
+		justify-content: center
 
 /*Project end*/
 

@@ -5,7 +5,19 @@
 /*==========  Desktop First  ==========*/
 
 @media only screen and (max-width : 1850px)
-  /**/
+  #my-header
+    .lvl2-c
+      margin-top: 0px
+    .lvl2-h
+      .group-b
+        justify-content: flex-end
+        .basket-c
+          margin-right: 20px
+        .phone-c
+          display: none
+        .btn-transparent
+          display: none
+
 
 //Extra large: ≥1200px
 +media-breakpoint-down(xl)
@@ -13,10 +25,34 @@
 
 //Large: ≥992px
 +media-breakpoint-down(lg)
-  /**/
-
+  #my-header 
+    .logo-c img
+      max-width: 100%
+      bottom: 15px
+    .group-b-c
+      display: none
+  #my-header
+    .lvl1-h
+      .group-b
+        .basket-c
+          margin-left: 45px
+          margin-right: 27px
+          svg
+            path
+              fill: $accent
 //Medium: ≥768px
 +media-breakpoint-down(md)
+  #my-header 
+    .header-r.lvl1-h
+      .group-b
+        .phone-c
+          display: none
+        .basket-c
+          display: none
+  .menu-m-b-c
+    display: block
+  .main-menu-cc
+    display: none
   .content
     table
       overflow-x: scroll
@@ -26,14 +62,23 @@
         display: block
         min-width: 500px
         width: 100%
+  #my-header .find-form
+    top: 6px
+    width: calc(100% - 30px)
+    margin-left: 15px
 //Small: ≥576px
 +media-breakpoint-down(sm)
   /**/
 //Extra small: >0
 +media-breakpoint-down(xs)
-	/**/
-
-
+  .menu-m-b-c .some-items
+    justify-content: space-around
+  #my-header .logo-c img
+    bottom: 5px
+  #my-header .find-form
+    top: 2px
+    width: calc(100% - 30px)
+    margin-left: 15px
 /*==========  Mobile First  ==========*/
 
 //Extra small: <576px
@@ -58,8 +103,16 @@
   .container
     width: 1170px
     max-width: 100%
-
+  #my-header
+    .lvl1-h
+      .group-b
+        .basket-c
+          display: none
 @media only screen and (min-width : 1850px)
+  #my-header
+    .lvl1-h
+      .group-b
+        display: none
   //my custom grid
   .container
     width: 1562px

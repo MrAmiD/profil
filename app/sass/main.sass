@@ -348,12 +348,13 @@ html.mm-opening .mm-menu~.mm-slideout
 	display: flex
 	align-items: center
 	justify-content: center
+.stand-sec
+	padding: 60px 0px
 .content
 	overflow-x: hidden
 	h1
-		text-align: center
+		text-align: left
 		font-family: $default-font
-		margin-top: 63px
 		font-size: 30px
 		text-transform: uppercase
 		position: relative
@@ -410,7 +411,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		font-size: 16px
 		line-height: 26px
 		margin-bottom: 20px
-		max-width: 850px
+		//max-width: 850px
 		font-weight: 500
 	a
 		color: $accent
@@ -629,24 +630,112 @@ html.mm-opening .mm-menu~.mm-slideout
 				transition: background .3s ease
 
 
-
+.jq-selectbox
+	max-width: 100%
+	width: 100%
+	border-color: $accent!important
+	.jq-selectbox__select-text
+		color: $accent
+	.jq-selectbox__dropdown
+		min-width: 211px
+		top: 45px!important
+	.jq-selectbox__select
+		background: #FFFFFF
+		box-shadow: none
+		font-family: $default-font
+		border-color: $accent!important
+		line-height: 46px
+		height: 46px
+		margin-bottom: 15px
+		border-radius: 0px
+	.jq-selectbox__trigger
+		border-color: transparent
+	li
+		transition: none
+		margin-bottom: 0px!important
+		background-image: none!important
+		background: #FFFFFF
+		border-bottom: solid 1px $dark
+		&:last-child
+			border-bottom: none
+		&:hover
+			background-color: $accent!important
+		&.selected.sel
+			background: lighten($accent, 10)
+	ul
+		max-width: 100%
+		border: solid 1px $dark
+		max-height: 91px
+		overflow: auto
+		+custom-scroll($accent2)
+	.jq-selectbox__dropdown
+		max-width: 100%
+	.jq-selectbox__trigger
+		background-repeat: no-repeat
+		background-position: center
+		background-image: url("../img/arrowSelect.png")
+		margin-right: 10px
+	.jq-selectbox__trigger-arrow
+		border: none
+	.jq-selectbox__select-text
+		max-width: 100%
+	li
+		white-space: inherit
+.fancybox-close-small
+	background-image: url("../img/closeBtn.png")
+	background-repeat: no-repeat
+	background-position: center
+	&:after
+		font-family: $default-font
+		font-weight: 100
+		color: #FFFFFF
+		display: none
 #consult, .popup
 	background: $accent2
+	margin-left: 15px
+	margin-right: 15px
 	&.white-popup
+		padding-top: 60px
+		padding-bottom: 60px
 		background: #fff
 		.h3, .h4, p, a, label
 			color: $dark
+		.h4
+			text-align: center
+			text-transform: uppercase
+			font-size: 36px
+			font-weight: 300
+			margin-bottom: 45px
+		p
+			font-weight: 500
 		input
 			border-radius: 0px
-			border: solid 2px $accent
+			border: none
+			border-bottom: 1px solid $accent
+			font-weight: 300
+			font-size: 17px
+			padding-left: 0px
 		textarea
-			border: solid 2px $accent
+			border: solid 1px $accent
 		.fancybox-close-small
 			&:after
 				color: $dark
 			&:hover, &:focus
 				&:after
 					color: lighten($dark, 20)
+	.btn-accent
+		background: $accent2
+		color: $accent
+		border-radius: 100px
+		font-size: 19px
+		margin: auto 
+		width: 200px
+		display: inline-block
+	label
+		color: $accent2!important
+		font-size: 14px
+		font-weight: 300
+		margin-bottom: 0px
 	.h1
 		margin-bottom: 15px
 	.h3
@@ -678,8 +767,6 @@ html.mm-opening .mm-menu~.mm-slideout
 		text-decoration: underline
 		&:hover, &:focus
 			text-decoration: none
-	label
-		color: #FFFFFF!important
 	input
 		display: block
 		width: 100%
@@ -703,10 +790,13 @@ html.mm-opening .mm-menu~.mm-slideout
 		resize: none
 		&::-webkit-input-placeholder
 			color: $dark
+			font-size: 14px
 		&:-moz-placeholder
 			color: $dark
+			font-size: 14px
 		&::-moz-placeholder
 			color: $dark
+			font-size: 14px
 	.client-msg
 		display: none
 	.fancybox-close-small
@@ -934,9 +1024,9 @@ button
 			z-index: 2
 			//padding: 31px 0
 			&:hover
-				a
+				&>a
 					color: $dark
-					background: #FFFFFF
+					background: #e7e5df
 			&.catalog
 				background: #FFFFFF
 				display: flex
@@ -946,7 +1036,7 @@ button
 				&:hover
 					background: $accent2
 					.catalog-menu-btn
-						background: $accent2
+						background: #e7e5df
 					a
 						background: $accent2
 				.catalog-menu-btn
@@ -960,6 +1050,8 @@ button
 					border-radius: 100px
 					border: solid 1px $accent
 					cursor: pointer
+					&:hover
+						background: $accent2
 				a
 					color: $dark
 			&:first-child
@@ -978,14 +1070,16 @@ button
 				display: none
 				min-width: 300px
 				position: absolute
-				top: 88px
+				top: 30px
+				animation: fadeEffect .2s ease
 				//bottom: 0px
 				left: 0px
-				background: #FFFFFF
+				background: #e7e5df
 				text-align: left
-				padding: 20px 23px
+				padding: 20px 7px
+				padding-left: 0px
 				z-index: 2
-				border-top: solid 2px $accent
+				border-top: solid 9px $accent
 				li
 					text-align: left
 					margin: 0px
@@ -1001,50 +1095,130 @@ button
 						text-transform: none
 						color: $dark
 						font-weight: 500
+						border-left: solid 3px transparent
+						border-radius:  0px
+						display: inline-block
+						width: 100%
 						&:hover
 							color: $accent
+							border-color: $accent2
 
-
+.slider-cc
+	background: #e7e5df
+	padding-bottom: 30px
 .main-slider
+	margin-top: -121px
+	.slick-dots
+		list-style-type: none
+		counter-reset:  item
+		padding-left: 0px
+		margin-top: 20px
+		bottom: -49px
+		text-align: right
+		li
+			font-weight: 700
+			position: relative
+			width: 30px
+			height: 30px
+			button
+				display: flex
+				align-items: center
+				justify-content: center
+				left: 50%
+				transform: translate(-50%, 0)
+				width: 100%
+				height: 100%
+				position: absolute 
+				&:before
+					display: none
+					text-align: center
+			&.slick-active
+				&:before
+					font-size: 23px
+					background-image: url("../img/dotsBg.png")
+					background-position: center
+					background-size: contain
+					background-repeat: no-repeat
+			&:before
+				content: counter(item)
+				counter-increment: item
+				font-size: 17px
+				font-weight: 300
+				position: absolute
+				bottom: 0px
+				line-height: 30px
+				width: 30px
+				height: 30px
+				left: 0px
+				text-align: center
+				
 	.item
 		position: relative
 		.content-c
 			position: absolute
-			bottom: 70px
+			top: calc( 50% + 60px)
+			transform: translate(0, -50%)
 			z-index: 2
 			color: #FFFFFF
-			background: rgba($dark, 0.9)
-			width: 450px
-			padding: 22px 50px
-			font-size: 16px
+			padding: 22px 80px
+			text-shadow: 0px 5px 19px rgba(0, 0, 0, 0.5)
+			font-size: 40px
 			font-weight: 700
 		.prev
-			min-height: 600px
+			min-height: 563px
 			background-size: cover
 			background-position: center
 			background-repeat: no-repeat
-	.slick-arrow
-		transform: scale(2)
-		background: rgba(#FFFFFF, 0.3)
+	.slick-arrow 
 		border-radius: 60px
 		display: flex
 		align-items: center
 		justify-content: center
 		z-index: 2
+		width: 54px
+		height: 54px
 		&.slick-next
 			right: 30px
+			top: calc(50% + 60px )
+			svg
+				left: 5px
 		&.slick-prev
 			left: 30px
+			top: calc(50% + 60px )
+			svg
+				left: -3px
+		&:hover
+			background: rgba(#000000, 0.5)
 		svg
 			position: relative
 			top: 0px
 			path
-				fill: $accent
+				fill: #ffffff
 	.slick-next:before, .slick-prev:before
 		display: none
-#my-footer
-	min-height: 400px
 
+.discount-b
+	background: #643173
+	padding: 20px
+	padding-right: 15px
+	padding-top: 60px
+	background-image: url("../img/discBg.png")
+	background-position: right bottom
+	margin-top: 30px
+	background-repeat: no-repeat
+	.discr
+		font-size: 23px
+		color: #FFFFFF
+		margin-bottom: 70px
+	.small-t
+		font-size: 15px
+		color: #FFFFFF
+	.b-t
+		font-size: 76px
+	.ofer-d
+		font-size: 42px
+		color: #FFFFFF
+		font-weight: 700
 .mobmenu-c
 	display: none
 
@@ -1073,6 +1247,8 @@ button
 		width: 100%
 		background: $accent
 		margin-top: 60px
+		position: relative
+		z-index: 2
 	.container
 		position: relative
 	.find-form
@@ -1151,6 +1327,174 @@ button
 		align-items: center
 		justify-content: center
 
+#my-content
+	min-height: 80vh
+
+#my-footer
+	min-height: 400px
+	background: #e7e5df
+	padding: 30px 0px
+	margin-top: 90px
+	.logo-c
+		img
+			max-width: 100%
+	.contacts-c
+		margin-top: 45px
+	.map-s
+		margin-top: 63px
+		.h3
+			font-size: 17px
+			color: $accent
+			font-weight: 300
+			margin-bottom: 30px
+		ul
+			list-style: none
+			padding: 0px
+			margin: 0px
+			li
+				margin-bottom: 15px
+				font-size: 17px
+				a
+					font-weight: 300
+					font-size: 17px
+				strong
+					font-weight: 700
+					margin-bottom: 30px
+					display: inline-block
+					text-transform: uppercase
+	.socials-c
+		display: flex
+		align-items: center
+		margin-top: 30px
+		.soc-i
+			margin-right: 15px
+			&:last-child
+				margin-right: 0px
+	.lvl2-c
+		border-top: solid 1px #FFFFFF
+		padding-top: 30px
+		margin-top: 15px
+	.order-c
+		font-size: 14px
+		font-weight: 300
+		line-height: 1.2
+		a
+			text-decoration: underline
+			&:hover, &:focus
+				text-decoration: none
+
+#catalog-menu
+	width: 960px
+	background: #e7e5df
+	padding: 70px 70px
+	min-height: 641px
+	.fancybox-close-small
+		position: fixed
+		top: 90px
+		right: 55px
+		background-image: url("../img/bigClose.png")
+	.svg-ul
+		padding: 0px
+		margin: 0px
+		list-style: none
+		padding-right: 10px
+		li
+			margin-bottom: 15px
+			border-bottom: solid 1px #ccc6c1
+			padding-bottom: 15px
+			a
+				display: flex
+				align-items: center
+				&:hover
+					color: #643173
+					.svg-c
+						path
+							fill: #643173
+				.txt
+					margin-left: 17px
+				.svg-c
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 32px
+					height: 32px
+					svg
+						path
+							fill: $accent
+	.show-c2
+		display: none
+		ul
+			padding: 0px
+			margin: 0px
+			list-style: none
+			padding-right: 10px
+			li
+				margin-bottom: 15px
+				padding-bottom: 15px
+				a
+					display: flex
+					align-items: center
+					&:hover
+						color: #643173
+						.svg-c
+							border-color: #643173
+							path
+								fill: #643173
+					.txt
+						margin-left: 17px
+					.svg-c
+						display: flex
+						align-items: center
+						justify-content: center
+						width: 50px
+						height: 50px
+						border: solid 1px $accent
+						border-radius: 100%
+						overflow: hidden
+						svg
+							position: relative
+							top: 0px
+							path
+								fill: $accent
+	.sub-m
+		list-style: none
+		margin: 0px
+		padding: 0px
+		margin-top: 4px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			border-left: 1px solid #b5aca6
+			height: 375px
+			top: -15px
+		&:after
+			content: ''
+			position: absolute
+			top: 6px
+			left: -7px
+			width: 15px
+			height: 15px
+			border-left: solid 1px #b5aca6
+			border-bottom: solid 1px #b5aca6
+			transform: rotate(45deg)
+			background: #e7e5df
+		&:nth-child(1)
+			&:after
+				top: 12px
+		&:nth-child(n+2)
+			display: none
+		+arrowCalc(2)
+		+arrowCalc(3)
+		+arrowCalc(4)
+		+arrowCalc(5)
+		+arrowCalc(6)
+		+arrowCalc(7)
+		li
+			font-size: 20px
+			font-weight: 300
+			margin-bottom: 17px
+			padding-left: 35px
 /*Project end*/
 
 

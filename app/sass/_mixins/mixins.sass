@@ -6,3 +6,17 @@
 	position: relative
 =m-offset-xxl($columnCount)
 	margin-left: ((100%/16)*$columnCount)
+=custom-scroll($color)
+	&::-webkit-scrollbar-track
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+		background-color: #F5F5F5
+	&::-webkit-scrollbar
+		width: 6px
+		background-color: #F5F5F5
+	&::-webkit-scrollbar-thumb
+		background-color: $color
+
+=arrowCalc($number)
+	&:nth-child(#{$number})
+		&:after
+			top: ($number*62px) - 62px + 7px

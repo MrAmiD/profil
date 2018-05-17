@@ -17,11 +17,21 @@
           display: none
         .btn-transparent
           display: none
-
+  .main-slider
+    margin-top: 0px
+  .main-slider .item .prev
+    min-height: 467px
+  .main-slider .item .content-c, .main-slider .slick-arrow.slick-next, .main-slider .slick-arrow.slick-prev
+    top: 50%
 
 //Extra large: ≥1200px
-+media-breakpoint-down(xl)
-  /**/
+@media only screen and (max-width : 1200px)
+  .discount-b .ofer-d
+    font-size: 36px
+  .discount-b
+    height: calc( 100% - 60px )
+    .discr
+      font-size: 17px
 
 //Large: ≥992px
 +media-breakpoint-down(lg)
@@ -42,7 +52,9 @@
               fill: $accent
 //Medium: ≥768px
 +media-breakpoint-down(md)
-  #my-header 
+  .discount-b
+    padding-bottom: 30px
+  #my-header
     .header-r.lvl1-h
       .group-b
         .phone-c
@@ -66,19 +78,47 @@
     top: 6px
     width: calc(100% - 30px)
     margin-left: 15px
+  .main-slider .item .content-c
+    font-size: 22px
 //Small: ≥576px
 +media-breakpoint-down(sm)
   /**/
 //Extra small: >0
 +media-breakpoint-down(xs)
+  .main-slider .item .content-c
+    padding-left: 30px
+    padding-right: 30px
+
+  .discount-b .b-t
+    font-size: 53px
+  .slider-cc
+    padding: 0px
+  #consult.white-popup .h4, .popup.white-popup .h4
+    text-align: center
+    text-transform: uppercase
+    font-size: 28px
+    font-weight: 300
+    margin-bottom: 15px
+    margin-top: 10px
+    text-align: left
+  #consult .container, .popup .container
+    padding: 0px
+  #consult .container .col-12, .popup .container .col-12
+    padding: 0px
   .menu-m-b-c .some-items
     justify-content: space-around
+    margin: 10px 0px
   #my-header .logo-c img
     bottom: 5px
   #my-header .find-form
-    top: 2px
+    top: 12px
     width: calc(100% - 30px)
     margin-left: 15px
+  #my-footer
+    .container 
+      *
+        text-align: center
+        justify-content: center
 /*==========  Mobile First  ==========*/
 
 //Extra small: <576px

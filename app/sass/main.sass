@@ -62,24 +62,23 @@ body
 	font-family: $default-font
 	font-size: 36px
 	color: $dark
-	font-weight: 900
+	font-weight: 300
 .h2, h2
 	font-family: $default-font
-	font-weight: 900
-	font-size: 25px
+	font-weight: 300
+	font-size: 32px
 	color: $dark
 .h3, h3, .h4, h4, .h5, h5
 	font-family: $default-font
-	font-size: 18px
-	font-weight: 900
+	font-size: 22px
+	font-weight: 300
 	color: $dark
-
 p
 	font-family: $default-font
 	font-size: 16px
 	color: $dark
 	font-weight: 300
-	line-height: 26px
+	line-height: 1.2
 a
 	text-decoration: none
 	color: $dark
@@ -272,24 +271,24 @@ html.mm-opening .mm-menu~.mm-slideout
 	z-index: 12
 	top: 50px
 	max-width: 100%
-	height: calc(100% - 112px)
+	//height: calc(100% - 112px)
 	transition: all .3s ease!important
 	*
 		transition: all .3s ease!important
 	&:not(.mm-menu)
 		display: none
 	.mm-title
-		color: #FFFFFF
+		color: $dark
 		border-color: transparent
 		font-size: 18px
 		line-height: 50px
 		padding: 0px
-		font-weight: 300
+		font-weight: 500
 	.mm-next:after, .mm-prev:before
 		width: 15px
 		height: 15px
 	&.mm-menu .mm-btn:after, &.mm-menu .mm-btn:before
-		border-color: transparent
+		border-color: $accent2
 	.mm-navbar .mm-btn:first-child
 		top: 3px
 	.mm-navbar
@@ -300,31 +299,33 @@ html.mm-opening .mm-menu~.mm-slideout
 		color: #FFFFFF
 		border-left-color: transparent
 		&:after
-			border-color: #FFFFFF
+			border-color: $accent2
 	.mm-listview
 		position: relative
+		width: 100%
+		margin-top: 0px
 		.mm-listview
-		li
-			&:first-child a
-				padding-top: 14px
-			&.active
-				color: $accent
-			&:hover
-				background: transparent
-				color: $accent
-			text-align: left
-			font-family: $default-font
-			font-size: 14px
-			font-weight: 900
-			border-color: transparent
-			color: $dark
+			li
+				&:first-child a
+					padding-top: 14px
+				&.active
+					color: $accent
+				&:hover
+					background: transparent
+					color: $accent
+					text-align: left
+					font-family: $default-font
+					font-size: 14px
+					font-weight: 900
+					border-color: transparent
+					color: $dark
 	.mm-listview>li>a, .mm-listview>li>span
 		padding: 10px 15px
-		border-bottom: 1px solid transparent
-		font-weight: 900
+		border-bottom: 1px solid #e7e5df
+		font-weight: 500
 		font-family: $default-font
 		text-align: center
-		font-size: 23px
+		font-size: 16px
 	.mm-listview .mm-next+a, .mm-listview .mm-next+span
 		margin-right: 0px
 	.mm-hasnavbar
@@ -333,6 +334,8 @@ html.mm-opening .mm-menu~.mm-slideout
 			&:first-child a
 				padding-top: 10px
 				margin-top: 10px
+	.mm-listview>li:not(.mm-divider):after
+		display: none
 	.close-btn
 		top: 0
 		right: 3px
@@ -344,12 +347,18 @@ html.mm-opening .mm-menu~.mm-slideout
 		align-items: center
 		justify-content: center
 		padding: 0px
+	#mm-1
+		padding-top: 50px
 .mm-menu .mm-fx-panels-none.mm-panel, .mm-menu.mm-fx-panels-none .mm-panel
 	display: flex
-	align-items: center
+	//align-items: flex-start
 	justify-content: center
 .stand-sec
-	padding: 60px 0px
+	padding: 45px 0px
+	.h2
+		font-weight: 300
+		font-size: 36px
+		margin-bottom: 45px
 .content
 	overflow-x: hidden
 	h1
@@ -373,7 +382,6 @@ html.mm-opening .mm-menu~.mm-slideout
 		font-size: 24px
 		font-weight: 500
 		margin: 15px 0
-		margin-top: 30px
 		text-transform: uppercase
 		color: $accent
 	h3
@@ -406,13 +414,13 @@ html.mm-opening .mm-menu~.mm-slideout
 		color: $accent
 	b
 		font-size: 16px
-		font-weight: 900
+		font-weight: 700
 	p
 		font-size: 16px
 		line-height: 26px
 		margin-bottom: 20px
 		//max-width: 850px
-		font-weight: 500
+		font-weight: 300
 	a
 		color: $accent
 		&:hover, &:focus
@@ -501,7 +509,7 @@ html.mm-opening .mm-menu~.mm-slideout
 		padding-left: 0px
 		margin-top: 20px
 		li
-			font-weight: 700
+			font-weight: 300
 			&:before
 				content: counter(item) ') '
 				counter-increment: item
@@ -1037,6 +1045,7 @@ button
 					background: $accent2
 					.catalog-menu-btn
 						background: #e7e5df
+						animation: shake 5s ease infinite
 					a
 						background: $accent2
 				.catalog-menu-btn
@@ -1189,6 +1198,77 @@ button
 				left: -3px
 		&:hover
 			background: rgba(#000000, 0.5)
+		svg
+			position: relative
+			top: 0px
+			path
+				fill: #ffffff
+	.slick-next:before, .slick-prev:before
+		display: none
+.video-slider
+	.slick-dots
+		list-style-type: none
+		counter-reset:  item
+		padding-left: 0px
+		margin-top: 20px
+		bottom: -49px
+		text-align: center
+		li
+			font-weight: 700
+			position: relative
+			width: 30px
+			height: 30px
+			button
+				display: flex
+				align-items: center
+				justify-content: center
+				left: 50%
+				transform: translate(-50%, 0)
+				width: 100%
+				height: 100%
+				position: absolute
+				&:before
+					display: none
+					text-align: center
+			&.slick-active
+				&:before
+					font-size: 23px
+					background-image: url("../img/dotsBg.png")
+					background-position: center
+					background-size: contain
+					background-repeat: no-repeat
+			&:before
+				content: counter(item)
+				counter-increment: item
+				font-size: 17px
+				font-weight: 300
+				position: absolute
+				bottom: 0px
+				line-height: 30px
+				width: 30px
+				height: 30px
+				left: 0px
+				text-align: center
+	.slick-arrow
+		border-radius: 60px
+		display: flex
+		align-items: center
+		justify-content: center
+		z-index: 2
+		width: 54px
+		height: 54px
+		&.slick-next
+			right: 30px
+			top: calc(50% + 13.5px )
+			svg
+				left: 5px
+		&.slick-prev
+			left: 30px
+			top: calc(50% + 13.5px )
+			svg
+				left: -3px
+		&:hover
+			background: rgba($accent2, 0.8)
 		svg
 			position: relative
 			top: 0px
@@ -1495,6 +1575,161 @@ button
 			font-weight: 300
 			margin-bottom: 17px
 			padding-left: 35px
+
+.catalog-cart-sec
+	.cart-c
+		.cart-r
+			margin-right: -1px
+			margin-left: -1px
+			.col-12
+				padding: 0 1px
+			.cart-i
+				overflow: hidden
+				margin-bottom: 45px
+				&:hover
+					.title-c
+						background: $accent2
+					.prev
+						transform: scale(1.2)
+				.prev-c
+					overflow: hidden
+					height: 256px
+				.prev
+					height: 256px
+					width: 100%
+					background-repeat: no-repeat
+					background-position: center
+					background-size: cover
+					transition: all .3s ease
+				.title-c
+					color: $accent
+					text-transform: uppercase
+					text-align:  center
+					background: #e7e5df
+					min-height: 100px
+					padding: 21px
+					display: flex
+					align-items: center
+					justify-content: center
+					font-size: 25px
+					font-weight: 300
+					transition: all .3s ease
+.preim-sec
+	.img-c
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		img
+			max-width: 100%
+			&:first-child
+				margin-bottom: 15px
+			&:nth-child(2)
+				margin-top: 15px
+	.content
+		padding-left: 45px
+		b
+			text-transform: uppercase
+		ol
+			list-style-type: none
+			counter-reset:  item
+			padding-left: 0px
+			margin-top: 20px
+			li
+				font-weight: 300
+				margin-bottom: 15px
+				&:before
+					content: counter(item) '. '
+					counter-increment: item
+					font-size: 29px
+					font-weight: 500
+
+.vidNews-sec
+	.video-fb
+		height: 560px
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		position: relative
+		margin-top: 30px
+		&:after
+			content: attr(cont)
+			background: $accent2
+			color: #FFFFFF
+			position: absolute
+			bottom: 0px
+			left: 50%
+			transform: translate(-50%, 0)
+			font-size: 24px
+			width: 100%
+			text-align: center
+			line-height: 45px
+	.btn-video
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		transition: all .3s ease
+		width: 54px
+		height: 54px
+		svg
+			transform: rotate(0deg)
+			transition: all .5s ease
+			path
+				fill: $accent2
+		&:hover
+			svg
+				transform: rotate(360deg)
+				path
+					fill: #ffffff
+	.news-c
+		margin-top: 38px
+.news-c
+	.news-i
+		display: flex
+		padding: 29px 0px
+		border-bottom: solid 1px #e7e5df
+		padding-left: 30px
+		transition: all .3s ease
+		&:last-child
+			border-bottom: none
+		&:hover
+			background: #f8f7f5
+			.prev
+				&:after
+					border-color: $accent2
+			*
+				color: #643173!important
+		.prev
+			width: 128px
+			height: 128px
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			background-color: $accent2
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				top: -10px
+				left: -10px
+				bottom: -10px
+				right: -10px
+				border: solid 1px transparent
+				transition: all .3s ease
+		.discr-c
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			min-height: 100%
+			margin-left: 45px
+			max-width: 360px
+			.date-n
+				font-size: 15px
+				color: $dark
+				text-decoration: underline
+			.annot
+				p
+					margin-bottom: 0px
 /*Project end*/
 
 

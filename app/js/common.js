@@ -44,6 +44,29 @@ function MainSliderInit(){//слайдер на главной странице
 
 
 }
+function videoSliderInit(){//слайдер на главной странице
+    $('.video-slider').slick({
+        dots: true,
+        infinite: true,
+        //dotsClass: 'slick-dots container d-flex align-items-center justify-content-end',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    dots: false
+                }
+            }
+        ],
+        prevArrow: '<button type="button" class="slick-prev sliderAboutArrow">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19px" height="35px"><path fill-rule="evenodd" fill="rgb(231, 229, 223)" d="M-0.015,18.198 L17.418,34.995 L18.931,33.598 L2.402,17.500 L18.986,1.402 L17.409,0.004 L-0.015,16.801 L-0.015,18.198 Z"/></svg>' +
+        '</button>',
+        nextArrow: '<button type="button" class="slick-next sliderAboutArrow">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19px" height="35px"><path fill-rule="evenodd" fill="rgb(231, 229, 223)" d="M19.015,16.802 L1.582,0.005 L0.069,1.402 L16.598,17.500 L0.014,33.598 L1.591,34.996 L19.015,18.199 L19.015,16.802 Z"/></svg>' +
+        '</button>'
+    });
+
+}
 function feedbackSliderSliderInit(){//слайдер на главной странице
     $('.feedback-slider').on('init', function(slick){
         console.log('.feedback-slider init was hit');
@@ -171,7 +194,7 @@ $(function() {
     });
 
 
-    $('#my-menu').html($('.main-menu').html());
+    // $('#my-menu').html($('.main-menu').html());
 
     //var  socials = $("#my-menu").data();
     $("#my-menu").mmenu({

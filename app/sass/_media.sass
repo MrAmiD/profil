@@ -23,7 +23,12 @@
     min-height: 467px
   .main-slider .item .content-c, .main-slider .slick-arrow.slick-next, .main-slider .slick-arrow.slick-prev
     top: 50%
-
+  .vidNews-sec .video-fb
+    height: 372px
+  .news-c .news-i:nth-child(n+3)
+    display: none
+  .news-c .news-i:nth-child(2)
+    border-bottom: transparent
 //Extra large: ≥1200px
 @media only screen and (max-width : 1200px)
   .discount-b .ofer-d
@@ -52,6 +57,10 @@
               fill: $accent
 //Medium: ≥768px
 +media-breakpoint-down(md)
+  .stat-b
+    padding-top: 37px
+    padding-bottom: 37px
+    height: 300px
   .discount-b
     padding-bottom: 30px
   #my-header
@@ -98,9 +107,32 @@
     margin-top: 0px
 //Small: ≥576px
 +media-breakpoint-down(sm)
-
+  .akcii-c .news-i
+    padding-right: 0px
+    flex-direction: column
+  .akcii-c .news-i .discr-c
+    margin-left: 0px
+    margin-top: 30px
+  .akcii-c .news-i .discr-c .date-n
+    margin-bottom: 15px
 //Extra small: >0
 +media-breakpoint-down(xs)
+  .h1, h1
+    font-size: 25px
+  .pagination
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+  .pagination .arr
+    min-width: 32px
+    .hidden-lg-down
+      display: none
+    &.prev .fa
+      padding-right: 0px
+    &.next .fa
+      padding-left: 0px
+  .akcii-c .news-i .prev-c
+    min-width: 1px
   .vidNews-sec .news-sec .news-c .news-i
     flex-direction: column
   .news-c .news-i .discr-c

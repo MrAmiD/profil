@@ -1976,7 +1976,177 @@ button
 						min-height: 57px
 						display: flex
 						align-items: center
+.fancybox-button--thumbs
+	display: none
+.door-b-r
+	margin-bottom: 60px
+	.door-b-c
+		.door-b-i
+			border: solid 1px #e7e5df
+			padding: 15px
+			max-width: 1140px
+			position: relative
+			.table-shit
+				display: flex
+				.prev-table
+					width: 134px
+					height: 134px
+					margin-right: 15px
+					.prev-img
+						width: 100%
+						height: 100%
+						background-size: cover
+						background-position: center
+					img
+						max-width: 100%
+			.title-good
+				font-size: 17px
+				font-weight: 600
+				margin-bottom: 15px
+			.door-table
+				overflow: auto
+				&.door-table-short
+					padding-top: 30px
+			.btn-close-b
+				background: none
+				position: absolute
+				right: 15px
+				top: 15px
+			.fb-img
+				width: 50px
+				border: solid 1px #e7e5df
+				img
+					max-width: 50px
+			.door-discr
+				display: flex
+				margin-bottom: 25px
+				.prev
+					background-repeat: no-repeat
+					background-size: contain
+					background-position: top
+					width: 62px
+					height: 137px
+					height: 137px
+					margin-right: 52px
+				.title-door
+					font-size: 17px
+					font-weight: 600
+					text-transform: uppercase
+					margin-bottom: 25px
+			.nowrap-txt
+				white-space: nowrap
+			table
+				max-width: 100%
+				label
+					margin-bottom: 0px
+					margin-left: 10px
+				thead
+					tr
+						th, td
+							background: #e7e5df
+							font-size: 17px
+							font-weight: 600
+							padding: 20px
+							border: solid 1px #ffffff
+							line-height: 1.2
+				tbody
+					tr
+						&:nth-child(even)
+							background: #fafaf9
+						th, td
+							padding: 15px
+							border: solid 1px #e7e5df
+		.color-c
+			display: flex
+			align-items: center
+			.color-prev
+				width: 45px
+				height: 45px
+				min-width: 45px
+				min-height: 45px
+				border-radius: 100px
+				margin-left: 15px
+			p
+				margin-bottom: 0px
+				font-size: 17px
+				font-weight: 600
 
+.jq-checkbox, .jq-radio
+	background: #FFFFFF
+	border-color: #e7e5df!important
+	border-radius: 0px
+.jq-checkbox, .jq-radio
+	width: 20px
+	height: 20px
+	min-width: 20px
+	min-height: 20px
+.jq-checkbox.checked .jq-checkbox__div
+	width: 100%
+	height: 100%
+	margin: 0px
+	border: none
+	background-image: url("../img/arrCb.png")
+	background-repeat: no-repeat
+	background-position: center
+	transform: none
+	border-color: $accent
+.jq-radio.checked .jq-radio__div
+	width: 100%
+	height: 100%
+	margin: 0px
+	border: none
+	background-image: url("../img/arrCb.png")
+	background-repeat: no-repeat
+	background-position: center
+	transform: none
+	background-color: #FFFFFF
+	border: none
+	box-shadow: none
+
+.jq-number
+	padding: 0px
+.jq-number__field
+	border-color: transparent!important
+	box-shadow: none
+	input
+		text-align: center
+.jq-number__spin
+	position: absolute
+	top: 0
+	right: 0
+	width: 20px
+	height: 20px
+	border: 1px solid #ccc
+	border: solid 1px #e7e5df
+	border-radius: 114px
+	background: #ffffff
+	box-shadow: none
+ 	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	text-shadow: 1px 1px #fff
+	cursor: pointer
+	&.plus
+		right: 0px
+		top: 10px
+		&:after
+			content: '+'
+			border: none
+			font-size: 24px
+			top: -5px
+			left: 3px
+	&.minus
+		left: 0px
+		top: 10px
+		&:after
+			content: '-'
+			border: none
+			font-size: 35px
+			top: -15px
+			left: 4px
+	input
+		font-size: 17px
 /*Project end*/
 
 

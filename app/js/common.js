@@ -176,6 +176,9 @@ $(function() {
     $('select').styler({
         selectSearch: true,
     });
+    $("input").styler({
+        selectSearch: true,
+    });
     //setInvest end
 
 

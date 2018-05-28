@@ -513,6 +513,8 @@ html.mm-opening .mm-menu~.mm-slideout
 				content: counter(item) ') '
 				counter-increment: item
 
+
+
 .breadcrumb
 	padding: 0
 	list-style: none
@@ -2018,7 +2020,6 @@ button
 				font-weight: 600
 				margin-bottom: 15px
 			.door-table
-				overflow: auto
 				&.door-table-short
 					padding-top: 30px
 			.btn-close-b
@@ -2063,6 +2064,7 @@ button
 							padding: 20px
 							border: solid 1px #ffffff
 							line-height: 1.2
+							position: relative
 				tbody
 					tr
 						&:nth-child(even)
@@ -2084,6 +2086,41 @@ button
 				margin-bottom: 0px
 				font-size: 17px
 				font-weight: 600
+.info-c
+	display: flex
+	align-items: center
+	.title-info
+		margin-right: 10px
+	.info-p
+		position: relative
+		width: 20px
+		height: 20px
+		min-width: 20px
+		min-height: 20px
+		border-radius: 100px
+		background: $accent
+		display: inline-block
+		color: #ffffff
+		text-align: center
+		cursor: pointer
+		animation: fadeEffect .3s ease
+		&:hover
+			background: $accent2
+			color: $accent
+			.content-p
+				display: block
+		.content-p
+			display: none
+			position: absolute
+			top: -21px
+			left: 26px
+			background: #ffffff
+			z-index: 10
+			border: solid 1px #e7e5df
+			padding: 20px
+			font-size: 17px
+			width: 265px
+			text-align: left
 .itogo-cc
 	max-width: 1140px
 	text-align: right
@@ -2259,6 +2296,114 @@ button
 		&.slick-next
 			svg
 				left: 0px
+
+.dveri-model-sec
+	margin-top: 60px
+	.door-b-r
+		margin-bottom: 0px
+		.door-b-c
+			.door-b-i
+				border: none
+				padding: 0px
+				.door-discr 
+					.title-door
+						text-transform: none
+						margin-bottom: 18px
+				.title-d
+					font-size: 17px
+					font-weight: 600
+					margin-bottom: 25px
+					text-transform: uppercase
+				.color-c
+					display: flex
+					flex-wrap: wrap
+				.good-discr
+					line-height: 1.7
+					margin-bottom: 0px
+					margin-top: 35px
+			.color-c
+				max-width: 320px
+				.color-prev
+					margin-left: 0px
+					margin-right: 10px
+					margin-bottom: 10px
+					max-width: 45px
+					flex-grow: 1
+					opacity: 0.5
+					cursor: pointer
+					position: relative
+					&:after
+						content: attr(cont)
+						background: #ffffff
+						padding: 10px
+						position: absolute
+						top: -5px
+						left: 52px
+						font-size: 14px
+						z-index: 5
+						border: solid 1px #e7e5df
+						display: none
+						animation: fadeEffect .3s ease
+					&.active
+						opacity: 1
+					&:hover
+						opacity: 1
+						&:after
+							display: block
+	.itogo-cc
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.itogo-c
+		.discr-p
+			margin-bottom: 0px
+	.btn-c
+		margin-top: 45px
+		text-align: center
+		max-width: 1140px
+.fotorama__nav
+	text-align: left
+.fotorama__thumb-border
+	border-color: $accent2
+.additional-tab-r
+	max-width: 1140px
+	margin-top: 60px
+	.h2
+		margin-bottom: 60px
+	.additional-tab-cc
+		.additional-tab-c
+			.additional-tab-i
+				margin-bottom: 15px
+				.title-tab
+					display: flex
+					border-bottom: solid 1px #e7e5df
+					padding-bottom: 15px
+				.btn-toogle
+					&.active
+						.plus-c
+							display: none
+					&:not(.active)
+						.minus-c
+							display: none
+					.btn-t
+						background: #e7e5df
+						width: 22px
+						height: 22px
+						min-width: 22px
+						min-height: 22px
+						display: flex
+						align-items: center
+						justify-content: center
+						border-radius: 100px
+						margin-right: 30px
+						cursor: pointer
+						&.minus-c
+							background: $accent2
+				.content-tab
+					padding: 15px
+					border: solid 1px #e7e5df
+					border-top: none
+					display: none
 /*Project end*/
 
 

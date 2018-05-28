@@ -187,6 +187,22 @@ $(document).on('click', '#catalog-menu .fancybox-close-small', function () {
     $('.fancybox-is-open .fancybox-bg').css({background: '#1e1e1e', opacity: 0.97});
 });
 
+$(document).on('click', '.color-c .color-prev', function () {
+    $('.color-c .color-prev').removeClass('active');
+    $(this).addClass('active');
+
+});
+
+$(document).on('click', '.additional-tab-r .additional-tab-cc .additional-tab-c .additional-tab-i .btn-toogle .btn-t', function () {
+    if($(this).parents('.btn-toogle').hasClass('active')){
+        $(this).parents('.btn-toogle').removeClass('active');
+        $(this).parents('.additional-tab-i').find('.content-tab').slideUp();
+    } else{
+        $(this).parents('.btn-toogle').addClass('active');
+        $(this).parents('.additional-tab-i').find('.content-tab').slideDown();
+    }
+});
+
 $(function() {
     /*datepicker start*/
 

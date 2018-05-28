@@ -599,12 +599,12 @@
                                     </a>
                                 </div>
                                 <div class="color-c">
-                                    <p>
-                                        Цвет
-                                    </p>
                                     <div class="color-prev" style="background-color: #643173">
 
                                     </div>
+                                    <p>
+                                        Название цвета
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -616,7 +616,7 @@
                                     <th rowspan="2">Размер<br>полотна</th>
                                     <th rowspan="2">Цена полотна</th>
                                     <th colspan="3" class="text-center">Выберите комплектующие</th>
-                                    <th rowspan="2">Кол-во дверей</th>
+                                    <th rowspan="2">Выбрать количество</th>
                                     <th rowspan="2">Сумма</th>
                                 </tr>
                                 <tr>
@@ -694,10 +694,10 @@
                                     <th>Размер (мм)</th>
                                     <th>Единица
                                         измерения</th>
+                                    <th>Цена без отделки</th>
+                                    <th>Цена с отделкой</th>
                                     <th>Выбрать
                                         количество</th>
-                                    <th>Цена с отделкой</th>
-                                    <th>Цена без отделки</th>
                                     <th>Сумма</th>
                                 </tr>
                                 </thead>
@@ -721,7 +721,12 @@
                                         X XXX
                                     </td>
                                     <td>
-                                        <input type="number" min="1" max="9" step="1" value="1">
+                                        <div class="d-flex align-items-center">
+                                            <input type="checkbox" id="cb4">
+                                            <label for="cb4">
+                                                С 2-й стороны (2000)
+                                            </label>
+                                        </div>
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
@@ -732,13 +737,9 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="d-flex align-items-center">
-                                            <input type="checkbox" id="cb4">
-                                            <label for="cb4">
-                                                С 2-й стороны (2000)
-                                            </label>
-                                        </div>
+                                        <input type="number" min="1" max="9" step="1" value="1">
                                     </td>
+
                                     <td>
                                         <b>
                                             305 000
@@ -764,24 +765,25 @@
                                         X XXX
                                     </td>
                                     <td>
-                                        <input type="number" min="1" max="9" step="1" value="1">
+                                        <div class="d-flex align-items-center">
+                                            <input type="checkbox" id="cb4">
+                                            <label for="cb4">
+                                                С 2-й стороны (2000)
+                                            </label>
+                                        </div>
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <input type="checkbox" id="cb5">
-                                            <label for="cb5">
+                                            <input type="checkbox" id="cb3">
+                                            <label for="cb3">
                                                 С 1-й стороны (2000)
                                             </label>
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="d-flex align-items-center">
-                                            <input type="checkbox" id="cb6">
-                                            <label for="cb6">
-                                                С 2-й стороны (2000)
-                                            </label>
-                                        </div>
+                                        <input type="number" min="1" max="9" step="1" value="1">
                                     </td>
+
                                     <td>
                                         <b>
                                             305 000

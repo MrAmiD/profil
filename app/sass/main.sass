@@ -2445,7 +2445,110 @@ button
 					.txt
 						text-align: center
 						margin-top: 15px
+.article-h
+	font-size: 22px
+	font-weight: 300
 
+.fotorama__thumb
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		z-index: 1
+		top: 0px
+		left: 0px
+		background: rgba($accent2, 0.5)
+		display: none
+	&:hover
+		&:after
+			display: block
+
+.fotorama-c
+	.fotorama__stage
+		position: relative
+	.price-b
+		position: absolute
+		left: 15px
+		bottom: 300px
+		background: $accent2
+		font-weight: 600
+		font-size: 36px
+		padding: 25px
+		padding-top: 10px
+		padding-bottom: 10px
+		padding-left: 35px
+		border-top-right-radius: 100px
+		border-bottom-right-radius: 100px
+		color: $accent
+		.rub
+			font-size: 28px
+.predmet-c
+	.base-price
+		margin-bottom: 75px
+		b
+			font-size: 28px
+			font-weight: 600
+			color: $accent3
+		.rub
+			font-size: 17px
+	.btn-c
+		margin-top: 75px
+
+.individ-sec
+	background: #efeaf1
+	padding-top: 90px
+	padding-bottom: 50px
+	margin-top: 90px
+	height: 630px
+	position: relative
+	overflow: hidden
+	&:before
+		content: ''
+		position: absolute
+		width: 50%
+		height: 100%
+		background: $accent3
+		top: 0px
+		left: -164px
+	&:after
+		content: ''
+		position: absolute
+		left: calc(  50% - 164px )
+		top: 0px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 315px 0 315px 164px
+		border-color: transparent transparent transparent $accent3
+	.left-c
+		position: relative
+		z-index: 1
+		max-width: 555px
+		.h2
+			margin-bottom: 50px
+		p
+			margin-bottom: 50px
+		label
+			font-weight: 300
+	.h2
+		font-size: 28px
+		font-weight: 600
+		color: #ffffff
+	p
+		color: #ffffff
+	label
+		color: #ffffff
+	a
+		color: #ffffff
+		text-decoration: underline
+	.acc-order
+		display: flex
+		align-items: center
+		label
+			margin-bottom: 0px
+			margin-left: 10px
 /*Project end*/
 
 

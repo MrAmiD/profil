@@ -1872,6 +1872,8 @@ button
 				&:hover
 					.title-c
 						background: $accent2
+						.accent-s
+							color: $accent!important
 					.prev
 						transform: scale(1.2)
 				.prev-c
@@ -1901,6 +1903,39 @@ button
 		.cart-c
 			.cart-r
 				.cart-i
+					position: relative
+					.shilds-c
+						position: absolute
+						top: 15px
+						left: 0px
+						width: 100%
+						pointer-events: none
+						.shild-i
+							display: flex
+							justify-content: flex-start
+							margin-bottom: 5px
+							&:last-child
+								margin-bottom: 0px
+							.txt-s
+								background: $accent3
+								color: #ffffff
+								font-size: 24px
+								font-weight: 600
+								text-transform: uppercase
+								padding: 16px 23px
+								z-index: 1
+								min-width: 130px
+								display: inline-block
+							&.left-shield
+								.txt-s
+									border-top-right-radius: 100px
+									border-bottom-right-radius: 100px
+
+							&.right-shield
+								justify-content: flex-end
+								.txt-s
+									border-bottom-left-radius: 100px
+									border-top-left-radius: 100px
 					.title-c
 						flex-direction: column
 						align-items: flex-start
@@ -1916,8 +1951,16 @@ button
 						strong
 							font-size: 28px
 							font-weight: 600
+						.price-old
+							font-size: 17px
+							color: $accent
+							text-decoration: line-through
+							margin-right: 15px
+						.accent-s
+							color: $accent2
 						b
 							font-weight: 600
+
 	.h3
 		margin-bottom: 60px
 .contact-sec
@@ -2700,8 +2743,14 @@ button
 				display: none
 
 /*progress file end*/
+.mt-0
+	margin-top: 0px
+.mb-15
+	margin-bottom: 15px
 .mb-30
 	margin-bottom: 30px
+.mb-45
+	margin-bottom: 45px
 .find-sec
 	margin-top: 0px
 	.h1
@@ -2732,6 +2781,9 @@ button
 				text-decoration: underline
 				&:hover, &:focus
 					color: $accent2
+
+
+
 /*Project end*/
 
 

@@ -2811,8 +2811,38 @@ button
 				&:hover, &:focus
 					color: $accent2
 
-
-
+.gal-r
+	.gal-c
+		margin-bottom: 30px
+		height: 290px
+		.gal-i
+			height: 290px
+			background-size: cover
+			background-position: center
+			position: relative
+			&:hover
+				&:after
+					display: flex
+					animation: fadeEffect .3s ease
+			&:after
+				content: '+'
+				position: absolute
+				font-size: 100px
+				color: #e7e5df
+				width: 100px
+				height: 100px
+				border-radius: 500px
+				background-color: rgba(#000000, 0.5) 
+				align-items: center
+				justify-content: center
+				line-height: 1
+				font-weight: 300
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				display: none
+		.gal-h2
+			height: 610px
 /*Project end*/
 
 

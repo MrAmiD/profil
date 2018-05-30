@@ -61,6 +61,17 @@
     margin-bottom: 10px
 //Medium: ≥768px
 +media-breakpoint-down(md)
+  .individ-sec
+    height: auto
+  .individ-sec:before
+    width: 100%
+    height: 390px
+    left: 0px
+  .individ-sec:after
+    display: none
+  .form-c
+    align-items: flex-start
+    margin-top: 121px
   .contact-sec .map-c
     height: 300px
   .stat-b
@@ -115,6 +126,10 @@
     height: 290px
 //Small: ≥576px
 +media-breakpoint-down(sm)
+  .form-c .i-group
+    max-width: 100%
+  .form-c input
+    width: 192px
   .akcii-c .news-i
     padding-right: 0px
     flex-direction: column
@@ -140,6 +155,21 @@
     margin-bottom: 10px
 //Extra small: >0
 +media-breakpoint-down(xs)
+  .form-c
+    margin-top: 45px
+  .individ-sec:before
+    display: none
+  .form-c .i-group
+    width: 100%
+  .form-c textarea
+    width: 100%
+    margin-bottom: 30px
+  .individ-sec
+    padding-top: 0px
+  .individ-sec .left-c
+    background: $accent3
+    padding-top: 45px
+    padding-bottom: 45px
   .additional-tab-r .additional-tab-cc .additional-tab-c .additional-tab-i .img-c .img-i
     flex-direction: column
   .additional-tab-r .additional-tab-cc .additional-tab-c .additional-tab-i .img-c .img-i p

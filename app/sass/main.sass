@@ -1070,7 +1070,7 @@ button
 	border: none
 
 .main-menu
-	ul
+	&>ul
 		list-style: none
 		margin: 0
 		padding: 0px
@@ -1089,18 +1089,29 @@ button
 					color: $dark
 					background: #e7e5df
 			&.catalog
-				background: #FFFFFF
-				display: flex
-				align-items: center
-				border-radius: 50px
-				padding-right: 10px
+				//background: #FFFFFF
+				//display: flex
+				//align-items: center
+				//border-radius: 50px
+				//padding-right: 10px
+				position: relative
+				z-index: 100
 				&:hover
-					background: $accent2
-					.catalog-menu-btn
-						background: #e7e5df
-						animation: shake 5s ease infinite
-					a
-						background: $accent2
+					.catalog-menu
+						display: block
+						animation: fadeEffect .3s ease
+					//background: $accent2
+					//.catalog-menu-btn
+					//	background: #e7e5df
+					//	animation: shake 5s ease infinite
+					//a
+					//	background: $accent2
+				.catalog-menu
+					display: none
+					position: absolute
+					left: 0px
+					top: 29px
+					border-top: 10px solid $dark
 				.catalog-menu-btn
 					position: relative
 					background: #FFFFFF
@@ -1114,8 +1125,8 @@ button
 					cursor: pointer
 					&:hover
 						background: $accent2
-				a
-					color: $dark
+				//a
+				//	color: $dark
 			&:first-child
 				margin-left: 0px
 			a
@@ -1123,12 +1134,13 @@ button
 				font-weight: 500
 				padding: 8px 12px
 				border-radius: 50px
-				color: #FFFFFF 
-			ul
+				color: #FFFFFF
+				white-space: nowrap
+			&>ul
 				padding: 0px
 			&:hover>.subm
 				display: block
-			.subm
+			&>.subm
 				display: none
 				min-width: 300px
 				position: absolute
@@ -1381,7 +1393,7 @@ button
 		background: $accent
 		margin-top: 60px
 		position: relative
-		z-index: 2
+		z-index: 3
 	.container
 		position: relative
 	.find-form
@@ -1389,8 +1401,8 @@ button
 		display: none
 		width: 100%
 		left: 0px
-		top: 0px
-		z-index: 2
+		top: -7px
+		z-index: 119
 		input
 			width: 100%
 			border-radius: 100px
@@ -1516,11 +1528,14 @@ button
 			&:hover, &:focus
 				text-decoration: none
 
-#catalog-menu
-	width: 960px
+#catalog-menu, #catalog-menu2
+	width: 858px
 	background: #e7e5df
-	padding: 70px 70px
+	padding: 70px 10px
 	min-height: 641px
+	-webkit-box-shadow: 0px 7px 18px 0px rgba(0,0,0,0.75)
+	-moz-box-shadow: 0px 7px 18px 0px rgba(0,0,0,0.75)
+	box-shadow: 0px 7px 18px 0px rgba(0,0,0,0.75)
 	.fancybox-close-small
 		position: fixed
 		top: 90px
@@ -1535,9 +1550,12 @@ button
 			margin-bottom: 15px
 			border-bottom: solid 1px #ccc6c1
 			padding-bottom: 15px
+			display: block
 			a
 				display: flex
 				align-items: center
+				color: $dark
+				padding: 0 12px
 				&:hover
 					color: $accent3
 					.svg-c
@@ -1567,6 +1585,7 @@ button
 				a
 					display: flex
 					align-items: center
+					color: $dark
 					&:hover
 						color: $accent3
 						.svg-c
@@ -1595,6 +1614,8 @@ button
 		padding: 0px
 		margin-top: 4px
 		position: relative
+		a
+			color: $dark
 		&:before
 			content: ''
 			position: absolute
@@ -1628,7 +1649,7 @@ button
 			font-weight: 300
 			margin-bottom: 17px
 			padding-left: 35px
-
+			display: block
 .catalog-cart-sec
 	.cart-c
 		.cart-r
@@ -2055,16 +2076,42 @@ button
 					text-transform: uppercase
 					font-weight: 700
 					margin-top: 30px
+			&.ac2
+				&:hover
+					.title-c
+						background: $accent2
+			&.ac3
+				&:hover
+					.title-c
+						background: $accent3
+						.svg-c
+							svg
+								path
+									fill: #ffffff
+						.discr
+							color: #FFFFFF
 			.ac2-prev
 				background: $accent2
 				svg
 					path
 						fill: #ea8400
+				&:hover
+					&+.title-c
+						background: $accent2
 			.ac3-prev
 				background: $accent3
 				svg
 					path
 						fill: #451d53
+				&:hover
+					&+.title-c
+						background: $accent3
+						.svg-c
+							svg
+								path
+									fill: #ffffff
+						.discr
+							color: #FFFFFF
 			.title-c
 				padding: 30px 15px
 				margin-top: 2px
@@ -2080,7 +2127,8 @@ button
 						margin-left: 15px
 						min-height: 57px
 						display: flex
-						align-items: center
+						align-items: center 
+					
 .fancybox-button--thumbs
 	display: none
 .door-b-r
@@ -2330,7 +2378,6 @@ button
 	.form-cc
 		display: flex
 		flex-direction: column
-
 		max-width: 514px
 		margin: auto
 		label
@@ -2357,6 +2404,7 @@ button
 
 .profile-pagonag-tbl-sec
 	margin-top: 75px
+
 	.h2
 		font-size: 17px
 		font-weight: 600
@@ -2376,7 +2424,13 @@ button
 					&.door-table-short
 						padding-top: 0px
 	.itogo-cc
+		display: flex
+		align-items: center
+		justify-content: space-between
 		max-width: 100%
+		.itogo-c
+		.discr-p
+			margin-bottom: 0px
 	.btn-c
 		margin-top: 50px
 		max-width: 100%
@@ -2595,7 +2649,7 @@ button
 	padding-top: 90px
 	padding-bottom: 50px
 	margin-top: 90px
-	height: 630px
+	height: 690px
 	position: relative
 	overflow: hidden
 	margin-bottom: 60px
@@ -2616,7 +2670,7 @@ button
 		width: 0
 		height: 0
 		border-style: solid
-		border-width: 315px 0 315px 164px
+		border-width: 345px 0 345px 131px
 		border-color: transparent transparent transparent $accent3
 	.left-c
 		position: relative
@@ -2645,6 +2699,8 @@ button
 		label
 			margin-bottom: 0px
 			margin-left: 10px
+	.form-c .btn-c
+		margin-top: 20px
 
 .form-c
 	display: flex
@@ -2673,7 +2729,7 @@ button
 	textarea
 		width: 360px
 		max-width: 100%
-		margin-bottom: 50px
+		margin-bottom: 20px
 		resize: none
 		border: solid 1px #e7e5df
 		border-radius: 3px
@@ -2881,6 +2937,40 @@ button.fancybox-button.fancybox-button--play
 		text-decoration: underline
 		&:hover, &:focus
 			text-decoration: none
+
+.triple-input
+	width: 457px
+	display: flex
+	justify-content: space-between
+	margin-bottom: 22px
+	.txt
+		display: flex
+		align-items: center
+	.triple-input-c
+		display: flex
+		justify-content: space-between
+		width: 360px
+	input
+		width: 80px
+		min-width: 1px
+		margin-left: 0px
+		margin-right: 5px
+		padding-left: 10px
+.select-c
+	width: 457px
+	display: flex
+	justify-content: space-between
+	.jq-selectbox
+		justify-content: flex-end
+		display: flex
+	.jq-selectbox__select
+		width: 360px
+		margin-right: 0px
+		border-color: #ffffff!important
+	select
+		width: 360px
+	.jq-selectbox .jq-selectbox__dropdown
+		max-width: 360px
 /*Project end*/
 
 

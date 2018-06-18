@@ -164,7 +164,7 @@ $(document).on('click', '#my-header .close-find', function () {
 
 
 
-$(document).on('mouseenter', '#catalog-menu .svg-ul li', function () {
+$(document).on('mouseenter', '.catalog-menu .svg-ul li', function () {
     console.log('mouseenter', $(this).index()+1);
     $('#catalog-menu .sub-m').hide();
     $('#catalog-menu .sub-m').eq($(this).index()).fadeIn();
@@ -175,7 +175,7 @@ $(document).on('mouseenter', '#catalog-menu .svg-ul li', function () {
         $($('#catalog-menu .sub-m').eq($(this).index()).data().show).fadeIn();
     }
 });
-$(document).on('mouseleave', '#catalog-menu .svg-ul li', function () {
+$(document).on('mouseleave', '.catalog-menu .svg-ul li', function () {
     //$('#catalog-menu .sub-m').eq($(this).index()).hide();
     //console.log('mouseleave')
 });
@@ -183,7 +183,7 @@ $(document).on('click', '.catalog-menu-btn', function () {
     $('#catalog-menu').click();
     $('.fancybox-is-open .fancybox-bg').css({background: '#ffffff', opacity: 0.97});
 });
-$(document).on('click', '#catalog-menu .fancybox-close-small', function () {
+$(document).on('click', '.catalog-menu .fancybox-close-small', function () {
     $('.fancybox-is-open .fancybox-bg').css({background: '#1e1e1e', opacity: 0.97});
 });
 
@@ -204,8 +204,7 @@ $(document).on('click', '.additional-tab-r .additional-tab-cc .additional-tab-c 
 });
 
 $(function() {
-    /*datepicker start*/
-
+    /*datepicker start*/ 
     //Календарь для выбора даты
     var now = new Date();
     var minDate = new Date(new Date().getTime() + 30 * 60 * 1000);//now +30 минут

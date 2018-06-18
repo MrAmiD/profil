@@ -59,8 +59,16 @@
               fill: $accent
   .filter-list li,.link-list li
     margin-bottom: 10px
+  .main-menu>ul li.catalog .catalog-menu
+    left: -194px
+  .form-c textarea
+    width: 460px
+    max-width: 100%
 //Medium: ≥768px
 +media-breakpoint-down(md)
+  .individ-sec
+    .form-c textarea
+      width: 292px
   .individ-sec
     height: auto
   .individ-sec:before
@@ -126,6 +134,27 @@
     height: 290px
 //Small: ≥576px
 +media-breakpoint-down(sm)
+  .triple-input-c
+    flex-direction: column
+    input
+      margin-bottom: 10px
+    .ti-item
+      align-items: center!important
+      .txt-small
+        padding-bottom: 9px
+  .select-c
+    width: 292px
+    .jq-selectbox__select
+      width: 192px
+  .select-c .jq-selectbox .jq-selectbox__dropdown
+    width: 292px
+  .individ-sec
+    .form-c
+      .btn-accent2
+        width: 292px
+      .triple-input-c
+        input
+          width: 162px
   .form-c .i-group
     max-width: 100%
   .form-c input
@@ -155,6 +184,9 @@
     margin-bottom: 10px
 //Extra small: >0
 +media-breakpoint-down(xs)
+  .individ-sec
+    .form-c .i-group
+      width: 292px
   .form-c
     margin-top: 45px
   .individ-sec:before

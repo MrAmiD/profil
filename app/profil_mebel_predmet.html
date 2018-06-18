@@ -664,6 +664,7 @@
                                 </label>
                                 <input type="text" id="mail-i">
                             </div>
+                            <textarea name="" id="ss" cols="30" rows="5" placeholder="Опишите необходимое вам изделие"></textarea>
 
                             <div class="file-upload">
                                 <div class="text-right bottom-bar">
@@ -685,14 +686,47 @@
                                 </div>
                             </div>
 
-                            <textarea name="" id="ss" cols="30" rows="5" placeholder="Оставьте комментарий"></textarea>
+                            <div class="triple-input">
+								<span class="txt">
+									Размеры:
+								</span>
+
+                                <div class="triple-input-c">
+                                    <div class="ti-item d-flex  align-items-end">
+                                        <input type="text" placeholder="Выс.">
+										<span class="txt-small">
+											мм.
+										</span>
+                                    </div>
+                                    <div class="ti-item d-flex  align-items-end">
+                                        <input type="text" placeholder="Шир.">
+									<span class="txt-small">
+										мм.
+									</span>
+                                    </div>
+                                    <div class="ti-item d-flex  align-items-end" >
+                                        <input type="text" placeholder="Толщ.">
+										<span class="txt-small">
+											мм.
+										</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="select-c">
+                                <label for="poroda-sel">Порода дерева</label>
+                                <select name="" id="poroda-sel">
+                                    <option value="Дуб">Дуб</option>
+                                    <option value="Сосна">Сосна</option>
+                                    <option value="Пихта">Пихта</option>
+                                </select>
+                            </div>
 
                             <div class="btn-c">
                                 <button type="" class="btn-accent2">
                                     Отправить
                                 </button>
                             </div>
-
 
                         </div>
                     </form>
@@ -1712,7 +1746,7 @@
         $(".upload").upload({
             maxSize: 1073741824,
             beforeSend: onBeforeSend,
-            label: "Добавить файл",
+            label: "Добавить фото/эскиз",
             leave: "У вас есть файлы ожидающие загрузки, вы уверены, что хотите покинуть эту страницу?"
         }).on("start.upload", onStart)
                 .on("complete.upload", onComplete)
